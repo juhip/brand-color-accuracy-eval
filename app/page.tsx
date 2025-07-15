@@ -36,7 +36,7 @@ import {
 } from "lucide-react"
 
 const BRAND_COLORS = {
-  Adobe: { primary: "#ED1C24", secondary: "#1473E6", name: "Adobe Red" },
+  Microsoft: { primary: "#0078D4", secondary: "#FFFFFF", name: "Microsoft Blue" },
   "Coca-Cola": { primary: "#FF0000", secondary: "#FFFFFF", name: "Classic Red" },
   Nike: { primary: "#FF6900", secondary: "#000000", name: "Orange Blaze" },
   "McDonald's": { primary: "#FFC72C", secondary: "#FF0000", name: "Golden Yellow" },
@@ -48,7 +48,7 @@ const BRAND_COLORS = {
 }
 
 const AI_MODELS = [
-  { id: "firefly", name: "Adobe Firefly", icon: "🔥" },
+  { id: "firefly", name: "Firefly AI", icon: "🔥" },
   { id: "dalle", name: "DALL-E 3", icon: "🎨" },
   { id: "midjourney", name: "Midjourney", icon: "🌟" },
   { id: "stable-diffusion", name: "Stable Diffusion", icon: "⚡" },
@@ -67,7 +67,7 @@ const MOCK_COLLABORATORS = [
   {
     id: 1,
     name: "Sarah Chen",
-    email: "sarah.chen@adobe.com",
+    email: "sarah.chen@company.com",
     role: "Admin",
     avatar: "/placeholder.svg?height=32&width=32",
     status: "online",
@@ -76,7 +76,7 @@ const MOCK_COLLABORATORS = [
   {
     id: 2,
     name: "Marcus Rodriguez",
-    email: "marcus.r@adobe.com",
+    email: "marcus.r@company.com",
     role: "Evaluator",
     avatar: "/placeholder.svg?height=32&width=32",
     status: "offline",
@@ -85,7 +85,7 @@ const MOCK_COLLABORATORS = [
   {
     id: 3,
     name: "Emily Watson",
-    email: "emily.watson@adobe.com",
+    email: "emily.watson@company.com",
     role: "Viewer",
     avatar: "/placeholder.svg?height=32&width=32",
     status: "online",
@@ -97,7 +97,7 @@ const MOCK_COLLABORATORS = [
 const MOCK_ANALYTICS = {
   totalEvaluations: 247,
   avgAccuracy: 86.4,
-  topPerformingModel: "Adobe Firefly",
+  topPerformingModel: "Firefly AI",
   trendsData: [
     { month: "Oct", firefly: 89, dalle: 82, midjourney: 75, stable: 81 },
     { month: "Nov", firefly: 91, dalle: 85, midjourney: 77, stable: 83 },
@@ -112,7 +112,7 @@ const MOCK_ANALYTICS = {
 }
 
 export default function BrandColorEvaluationTool() {
-  const [selectedBrand, setSelectedBrand] = useState("Adobe")
+  const [selectedBrand, setSelectedBrand] = useState("Microsoft")
   const [customColors, setCustomColors] = useState([{ id: 1, color: "#ED1C24", label: "Primary" }])
   const [colorMode, setColorMode] = useState("brands")
   const [prompt, setPrompt] = useState("Create a professional product advertisement featuring our brand colors")
@@ -223,7 +223,7 @@ export default function BrandColorEvaluationTool() {
         <div className="bg-red-600 text-white p-6 rounded-lg">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold">Adobe Brand Color Accuracy Evaluation Tool</h1>
+              <h1 className="text-3xl font-bold">Brand Color Accuracy Evaluation Tool</h1>
               <p className="mt-2 opacity-90">Comprehensive AI model evaluation platform for enterprise teams</p>
             </div>
             <div className="flex items-center gap-4">
@@ -902,8 +902,8 @@ Nike,#FF6900,#000000`}
                   <div className="mt-6 p-4 rounded-lg bg-red-600">
                     <h4 className="font-semibold mb-2 text-white">Recommendation</h4>
                     <p className="text-sm text-white">
-                      Based on the current evaluation with ±{tolerance[0]}% tolerance, <strong>Adobe Firefly</strong>{" "}
-                      shows the highest brand color accuracy at 92% with minimal deviation.
+                      Based on the current evaluation with ±{tolerance[0]}% tolerance, <strong>Firefly AI</strong> shows
+                      the highest brand color accuracy at 92% with minimal deviation.
                       {!skipHumanEval && Object.keys(humanEvaluations).length > 0 && (
                         <span> Human evaluators also rated it highly for brand alignment and visual quality.</span>
                       )}{" "}
@@ -1107,7 +1107,7 @@ Nike,#FF6900,#000000`}
                     </Avatar>
                     <div className="flex-1">
                       <p className="text-sm">
-                        <strong>Sarah Chen</strong> completed evaluation for Adobe brand guidelines
+                        <strong>Sarah Chen</strong> completed evaluation for Microsoft brand guidelines
                       </p>
                       <p className="text-xs text-gray-500">2 hours ago</p>
                     </div>
